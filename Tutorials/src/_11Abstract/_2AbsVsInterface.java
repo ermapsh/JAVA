@@ -3,7 +3,7 @@ package _11Abstract;
 /*
     You can create properties in interface
     But you cannot modify the methods of interfaces from anywhere,
-    but you can modify/update attribute of interface through classes
+    but you can modify/update attribute of interface through classes its main difference of abs vs interface
 */
 
 interface Bicycle {
@@ -35,8 +35,9 @@ class Hercules implements Bicycle {
     }
 
     /*
-       is necessary to must implement an interface method where you are implementing a new
-       class in
+     * is necessary to must implement an interface method where you are implementing
+     * a new
+     * class in
      */
     @Override
     public int applyBreak(int breakAmount) {
@@ -55,7 +56,7 @@ class Hercules implements Bicycle {
 class Hero implements Bicycle, HornBicycle {
     @Override
     public int applyBreak(int breakAmount) {
-        return this.MaxBreakLimit - breakAmount;
+        return Bicycle.MaxBreakLimit - breakAmount;
     }
 
     @Override
@@ -93,9 +94,9 @@ public class _2AbsVsInterface {
 }
 
 /*
-  interface is like class, but we declare abstract methods in abstract class
-  that methods we declare in interface,
-  class implementing an interface there are two possibility-->
-  1. make a class abstract class
-  2. declare interface methods there
-*/
+ * interface is like class, but we declare abstract methods in abstract class
+ * that methods we declare in interface,
+ * class implementing an interface there are two possibility-->
+ * 1. make a class abstract class
+ * 2. declare interface methods there
+ */

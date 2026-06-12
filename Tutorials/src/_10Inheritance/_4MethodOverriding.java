@@ -10,6 +10,10 @@ class A {
     public void meth2() {
         System.out.println("Method2 from class A");
     }
+
+    public void meth2(String name) {
+        System.out.println("mera naam hai " + name);
+    }
 }
 
 class B extends A {
@@ -17,6 +21,11 @@ class B extends A {
     @Override // keyword to say this method is overrided
     public void meth2() {
         System.out.println("Meth2 from class B");
+    }
+
+    @Override
+    public void meth2(String name) {
+        System.out.println("mera naam hai " + name + " Hhahahah");
     }
 
     public int meth3() {
@@ -28,5 +37,6 @@ public class _4MethodOverriding {
     public static void main(String[] args) {
         B b = new B();
         b.meth2();// in class B already meth2 is present
+        b.meth2("Mahesh");
     }
 }

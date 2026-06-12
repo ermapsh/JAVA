@@ -21,13 +21,11 @@ public class _3VarArgs {
         System.out.println("sum is " + sum);
     }
 
-
     // its like arbitrary arguments in python
     private static void fun(int... a) {
         /* Here int... is like int[] */
-        System.out.println("The type of a is " + a.getClass().getSimpleName());
-        for (int e : a
-        ) {
+        System.out.println("The type of a is " + a.getClass() + " " + a.getClass().getSimpleName());
+        for (int e : a) {
             System.out.printf("%d ", e);
         }
         System.out.println();
